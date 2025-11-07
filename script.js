@@ -45,10 +45,14 @@ const updateProgress = () => {
 
   timerRing.style.setProperty('--progress', progress.toString());
   timerTime.textContent = formatTime(secondsRemaining);
+  const isUrgent = totalDuration > 0 && remaining <= totalDuration * 1000 * 0.4;
+  timerTime.classList.toggle('is-urgent', isUrgent);
+  timerStatus.textContent = isUrgent ? 'Ultima chiamata!' : 'Countdown attivo';
 
   if (remaining <= 0) {
     timerStatus.textContent = 'Offerta conclusa';
     timerRing.classList.add('completed');
+    timerTime.classList.remove('is-urgent');
     timerActive = false;
     animationFrameId = null;
     return;
@@ -80,6 +84,7 @@ const startTimer = (minutes, label, accent) => {
   timerStatus.textContent = 'Countdown attivo';
   timerRing.classList.remove('completed');
   timerRing.style.setProperty('--progress', '0');
+  timerTime.classList.remove('is-urgent');
   setAccent(accent);
 
   switchPanel('timer');
