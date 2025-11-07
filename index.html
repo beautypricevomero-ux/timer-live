@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f6f8ff" />
+    <title>Timer Offerte Live</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app" data-screen="selection">
+      <section class="panel panel-selection" data-panel="selection">
+        <header class="panel-header">
+          <p class="eyebrow">Glow Live Deals</p>
+          <h1>Timer offerte bomba</h1>
+          <p class="lede">Scegli il conto alla rovescia perfetto per scandire le promo lampo durante la live e tenere alta l'energia.</p>
+        </header>
+        <div class="button-grid">
+          <button class="timer-option" data-minutes="3" data-label="Sprint Lampo" data-accent="#FF9BCF">3 minuti</button>
+          <button class="timer-option" data-minutes="5" data-label="Highlight Live" data-accent="#FFD37A">5 minuti</button>
+          <button class="timer-option" data-minutes="7" data-label="Showcase Plus" data-accent="#90B5FF">7 minuti</button>
+          <button class="timer-option" data-minutes="10" data-label="Mega Reveal" data-accent="#7DFFE5">10 minuti</button>
+        </div>
+      </section>
+
+      <section class="panel panel-timer" data-panel="timer" hidden>
+        <header class="panel-header">
+          <button class="action action-back" type="button" aria-label="Torna alla selezione">&larr; Indietro</button>
+          <div class="tagline">Prossima offerta in arrivo</div>
+        </header>
+        <div class="timer-stage">
+          <div class="timer-ring" role="presentation">
+            <div class="timer-face">
+              <div class="timer-label">Highlight Live</div>
+              <div class="timer-time" aria-live="polite">05:00</div>
+              <div class="timer-status">Countdown attivo</div>
+            </div>
+          </div>
+        </div>
+        <footer class="panel-footer">
+          <button class="action action-reset" type="button">Ricomincia</button>
+        </footer>
+      </section>
+    </main>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
