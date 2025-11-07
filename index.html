@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#151521" />
+    <title>Bloom Ritual Timer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app" data-screen="selection">
+      <section class="panel panel-selection" data-panel="selection">
+        <header class="panel-header">
+          <p class="eyebrow">Bloom Cosmetics</p>
+          <h1>Rituali perfetti, ogni volta.</h1>
+          <p class="lede">Scegli il tempo ideale per la tua esperienza beauty e lascia che il timer pensi al resto.</p>
+        </header>
+        <div class="button-grid">
+          <button class="timer-option" data-minutes="3" data-label="Flash Glow" data-accent="#FF7AC5">3 minuti</button>
+          <button class="timer-option" data-minutes="5" data-label="Radiant Boost" data-accent="#FFB86C">5 minuti</button>
+          <button class="timer-option" data-minutes="7" data-label="Deep Care" data-accent="#7A9BFF">7 minuti</button>
+          <button class="timer-option" data-minutes="10" data-label="Total Ritual" data-accent="#6FFFE9">10 minuti</button>
+        </div>
+      </section>
+
+      <section class="panel panel-timer" data-panel="timer" hidden>
+        <header class="panel-header">
+          <button class="action action-back" type="button" aria-label="Torna alla selezione">&larr; Indietro</button>
+          <div class="tagline">Il tuo momento wellness</div>
+        </header>
+        <div class="timer-stage">
+          <div class="timer-ring" role="presentation">
+            <div class="timer-face">
+              <div class="timer-label">Radiant Boost</div>
+              <div class="timer-time" aria-live="polite">05:00</div>
+              <div class="timer-status">In corso</div>
+            </div>
+          </div>
+        </div>
+        <footer class="panel-footer">
+          <button class="action action-reset" type="button">Reset</button>
+        </footer>
+      </section>
+    </main>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
