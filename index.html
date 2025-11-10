@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Timer Live Offerte Bomba</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="panel panel--selection is-active" aria-labelledby="selection-title">
+        <div class="selection-header">
+          <h1 id="selection-title">Offerte Bomba Live</h1>
+          <p>Scegli il countdown per la prossima promo lampo</p>
+        </div>
+        <div class="preset-grid">
+          <button class="preset-card" data-duration="180">
+            <span class="preset-label">Flash 3'</span>
+            <span class="preset-caption">Tre minuti di hype puro</span>
+          </button>
+          <button class="preset-card" data-duration="300">
+            <span class="preset-label">Scintilla 5'</span>
+            <span class="preset-caption">Tempo perfetto per la demo</span>
+          </button>
+          <button class="preset-card" data-duration="420">
+            <span class="preset-label">Vibe 7'</span>
+            <span class="preset-caption">Approfondimento express</span>
+          </button>
+          <button class="preset-card" data-duration="600">
+            <span class="preset-label">Explode 10'</span>
+            <span class="preset-caption">Mega promo in arrivo</span>
+          </button>
+        </div>
+        <footer class="selection-footer">
+          <p>Tenuta pensata per display Samsung S25 Ultra in orizzontale.</p>
+        </footer>
+      </section>
+
+      <section class="panel panel--countdown" aria-live="polite" aria-atomic="true">
+        <header class="countdown-header">
+          <button class="ghost-btn" data-action="back" aria-label="Torna alla scelta">
+            <span>← Preset</span>
+          </button>
+          <div class="status-label">Promo in corso</div>
+          <button class="ghost-btn" data-action="reset">Reset</button>
+        </header>
+        <div class="countdown-stage">
+          <div class="time-wrapper">
+            <div class="time-readout">00:00</div>
+            <div class="time-caption">L'offerta esplode ora!</div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
